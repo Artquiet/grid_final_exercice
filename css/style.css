@@ -1,0 +1,227 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* common page style */
+body {
+    background-color: #333;
+    color: bisque;
+}
+
+header,
+main,
+footer {
+    margin-top: 50px;
+}
+
+
+/* header style and placement */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    height: 100px;
+}
+
+/* footer style and placement */
+
+footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.2em;
+    text-decoration: underline;
+    height: 50px;
+    width: 95%;
+}
+
+/* div style and placement  */
+
+/* main construction */
+
+main {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(15, 1fr);
+    gap: 15px;
+    height: 70vh;
+}
+
+/* grid bloc placement */
+/* general placement */
+div.items {
+    align-items: center;
+    color: #333;
+    display: grid;
+    font-size: 1.5em;
+    font-weight: bolder;
+    justify-content: center;
+}
+
+/* bloc per bloc placement */
+
+div.header {
+    background-color: rgb(255, 137, 137);
+    grid-column: 1/16;
+    grid-row: 1/3;
+    margin: 10px 10px 0px 10px;
+}
+
+div.nav {
+    background-color: rgb(255, 202, 137);
+    grid-column: 1/3;
+    grid-row: 3/9;
+    margin-left: 10px;
+}
+
+div.article {
+    background-color: rgb(245, 255, 137);
+    grid-column: 3/14;
+    grid-row: 4/9;
+}
+
+div.section {
+    background-color: rgb(137, 255, 147);
+    grid-column: 3/14;
+    grid-row: 3/3;
+}
+
+div.aside {
+    background-color: rgb(137, 202, 255);
+    grid-column: 14/16;
+    grid-row: 3/9;
+    margin-right: 10px;
+}
+
+div.footer {
+    background-color: rgb(182, 137, 255);
+    grid-column: 1/16;
+    grid-row: 9/11;
+    margin: 0px 10px 10px 10px;
+}
+
+/* responsive design tablet */
+
+@media screen and (max-width: 750px) {
+
+    /* text change */
+    h1 {
+        font-size: 1.1em;
+    }
+
+    em {
+        font-size: 1em;
+    }
+
+    div.items {
+        font-size: 1.2em;
+    }
+
+    /* grid disposition change */
+    header,
+    main,
+    footer {
+        margin-top: 20px;
+    }
+
+    div.header {
+        grid-column: 1/16;
+        grid-row: 1/3;
+        margin: 0px 7px 0px 7px;
+    }
+
+    div.nav {
+        font-size: 0.8em;
+        grid-column: 1/3;
+        grid-row: 5/9;
+        margin-left: 7px;
+    }
+
+    div.article {
+        grid-column: 3/16;
+        grid-row: 5/9;
+        margin-right: 7px;
+    }
+
+    div.section {
+        grid-column: 1/16;
+        grid-row: 3/5;
+        margin: 0px 7px 0px 7px;
+    }
+
+    div.aside {
+        font-size: 0.7em;
+        grid-column: 1/3;
+        grid-row: 9/11;
+        margin-left: 7px;
+        margin-right: 0px;
+    }
+
+    div.footer {
+        grid-column: 3/16;
+        grid-row: 9/11;
+        margin: 0px 7px 0px 0px;
+    }
+}
+
+/* responsive design mobile */
+
+@media screen and (max-width: 400px) {
+
+    /* text change */
+    h1,
+    em {
+        font-size: 0.8em;
+    }
+
+    div.items {
+        font-size: 1em;
+        margin: 0px 7px 0px 7px;
+    }
+
+    /* grid disposition change */
+    header,
+    main,
+    footer {
+        margin-top: 5px;
+    }
+
+    div.header {
+        grid-column: 1/16;
+        grid-row: 1/2;
+    }
+
+    div.nav {
+        grid-column: 1/16;
+        grid-row: 8/9;
+    }
+
+    div.article {
+        grid-column: 1/16;
+        grid-row: 3/8;
+    }
+
+    div.section {
+        grid-column: 1/16;
+        grid-row: 2/3;
+    }
+
+    div.aside {
+        grid-column: 1/16;
+        grid-row: 9/10;
+    }
+
+    div.footer {
+        grid-column: 1/16;
+        grid-row: 10/11;
+    }
+}
